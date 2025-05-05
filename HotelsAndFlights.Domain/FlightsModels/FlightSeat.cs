@@ -12,6 +12,6 @@ namespace HotelsAndFlights.Domain.FlightsModels
 
 
         public Guid FlightId { get; set; }
-        public Flight? Flight { get; set; }
+        public Flight Flight { get; set; } = null!;
     }
 }

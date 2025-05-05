@@ -7,6 +7,6 @@
         public string AltText { get; set; } = string.Empty;
 
         public Guid HotelId { get; set; }
-        public Hotel? Hotel { get; set; }
+        public Hotel Hotel { get; set; } = null!;
     }
 }

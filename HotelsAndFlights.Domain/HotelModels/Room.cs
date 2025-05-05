@@ -13,7 +13,7 @@ namespace HotelsAndFlights.Domain.Models
         public int RoomNumber { get; set; }
 
         public Guid HotelId { get; set; }
-        public Hotel? Hotel { get; set; }
+        public Hotel Hotel { get; set; } = null!;
         public Guid RoomTypeId { get; set; }
         public RoomType RoomType { get; set; } = null!;
         public IList<FlightBooking> FlightBookings { get; set; } = [];

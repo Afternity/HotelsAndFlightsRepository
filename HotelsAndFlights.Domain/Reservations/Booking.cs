@@ -11,8 +11,8 @@ namespace HotelsAndFlights.Domain.Reservations
         public DateTime CreationDate { get; set; }
 
         public Guid UserId { get; set; }
-        public User? User { get; set; }
-        public IList<FlightBooking> FlightsBooking { get; set; } = [];
-        public IList<HotelBooking> HotelsBooking { get; set; } = [];
+        public User User { get; set; } = null!;
+        public IList<FlightBooking> FlightBookings { get; set; } = [];
+        public IList<HotelBooking> HotelBookings { get; set; } = [];
     }
 }
