@@ -1,16 +1,11 @@
-﻿using HotelsAndFlights.Domain.Reservations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HotelsAndFlights.Domain.ReservationModels;
 
-namespace HotelsAndFlights.Domain.Models
+namespace HotelsAndFlights.Domain.HotelModels
 {
     public class Room
     {
         public Guid Id { get; set; }
-        public int RoomNumber { get; set; }
+        public string RoomNumber { get; set; } = string.Empty;
 
         public Guid HotelId { get; set; }
         public Hotel Hotel { get; set; } = null!;

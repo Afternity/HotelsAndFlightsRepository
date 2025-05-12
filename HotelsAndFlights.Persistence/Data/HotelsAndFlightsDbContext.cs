@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using HotelsAndFlights.Domain;
 using HotelsAndFlights.Domain.FlightsModels;
-using HotelsAndFlights.Domain.Models;
+using HotelsAndFlights.Domain.HotelModels;
 using HotelsAndFlights.Domain.Reservations;
 using HotelsAndFlights.Domain.UsersModels;
 
-namespace HotelsAndFlights.Persistence
+namespace HotelsAndFlights.Persistence.Data
 {
     public class HotelsAndFlightsDbContext : DbContext
     {

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-namespace HotelsAndFlights.Domain.FlightsModels
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace HotelsAndFlights.Domain.FlightModels
 {
     public class FlightSeat
     {

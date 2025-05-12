@@ -1,4 +1,4 @@
-﻿namespace HotelsAndFlights.Domain.Models
+﻿namespace HotelsAndFlights.Domain.HotelModels
 {
     public class HotelPhoto
     {

@@ -1,9 +1,7 @@
-﻿using HotelsAndFlights.Domain.FlightsModels;
-using HotelsAndFlights.Domain.Models;
-using HotelsAndFlights.Domain.UsersModels;
+﻿using HotelsAndFlights.Domain.HotelModels;
 using System.ComponentModel.DataAnnotations;
 
-namespace HotelsAndFlights.Domain.Reservations
+namespace HotelsAndFlights.Domain.ReservationModels
 {
     public class FlightBooking
     {

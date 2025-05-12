@@ -1,9 +1,6 @@
-﻿using HotelsAndFlights.Domain.FlightsModels;
-using HotelsAndFlights.Domain.Models;
-using HotelsAndFlights.Domain.UsersModels;
-using System.Reflection.Metadata;
+﻿using HotelsAndFlights.Domain.UserModels;
 
-namespace HotelsAndFlights.Domain.Reservations
+namespace HotelsAndFlights.Domain.ReservationModels
 {
     public class Booking
     {
