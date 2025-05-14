@@ -7,6 +7,8 @@ namespace HotelsAndFlights.Domain.FlightModels
         public Guid Id { get; set; }  
         public string SeatClass { get; set; } = string.Empty;
         public decimal Price { get; set; } = decimal.Zero;
+
+        [Range(1, 350)]
         public int AvailableCount { get; set; }
 
 

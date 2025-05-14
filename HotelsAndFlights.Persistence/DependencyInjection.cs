@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HotelsAndFlights.Persistence.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace HotelsAndFlights.Persistence
 {
-    public class DependencyInjection
+    public static class DependencyInjection
     {
+        
+        
     }
 }

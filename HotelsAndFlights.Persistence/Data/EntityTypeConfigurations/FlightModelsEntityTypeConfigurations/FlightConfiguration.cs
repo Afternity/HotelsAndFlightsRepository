@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using HotelsAndFlights.Domain.FlightModels;
-using HotelsAndFlights.Domain.ReservationModels;
 
 namespace HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.FlightModelsEntityTypeConfigurations
 {
@@ -21,8 +20,7 @@ namespace HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.FlightModel
                 .IsRequired()
                 .HasMaxLength(50);
             builder.Property(flight => flight.DepartureTime)
-                .IsRequired()
-                .HasColumnType("datetime2");
+                .IsRequired();
             builder.Property(flight => flight.Duration)
                 .IsRequired()
                 .HasConversion(

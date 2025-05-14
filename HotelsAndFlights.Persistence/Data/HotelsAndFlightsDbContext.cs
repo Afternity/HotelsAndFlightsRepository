@@ -1,9 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using HotelsAndFlights.Domain;
-using HotelsAndFlights.Domain.FlightsModels;
+using HotelsAndFlights.Domain.FlightModels;
 using HotelsAndFlights.Domain.HotelModels;
-using HotelsAndFlights.Domain.Reservations;
-using HotelsAndFlights.Domain.UsersModels;
+using HotelsAndFlights.Domain.ReservationModels;
+using HotelsAndFlights.Domain.UserModels;
+using HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.FlightModelsEntityTypeConfigurations;
+using HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.HotelModelsEntityTypeConfiguratons;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.ReservationModelsEntityTypeConfigurations;
+using HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.UserModelsEntityTypeConfigurations;
 
 namespace HotelsAndFlights.Persistence.Data
 {
@@ -29,7 +34,20 @@ namespace HotelsAndFlights.Persistence.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new FlightConfiguration());
+            modelBuilder.ApplyConfiguration(new FlightSeatConfiguration());
 
+            modelBuilder.ApplyConfiguration(new HotelConfiguration());
+            modelBuilder.ApplyConfiguration(new HotelPhotoConfiguratuon());
+            modelBuilder.ApplyConfiguration(new RoomConfiguration());
+            modelBuilder.ApplyConfiguration(new RoomTypeConfiguration());
+
+            modelBuilder.ApplyConfiguration(new BookingConfiguration());
+            modelBuilder.ApplyConfiguration(new FlightBookingConfiguration());
+            modelBuilder.ApplyConfiguration(new HotelBookingConfiguration());
+
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new UserTypeConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

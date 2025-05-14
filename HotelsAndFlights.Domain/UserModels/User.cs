@@ -1,4 +1,5 @@
 ﻿using HotelsAndFlights.Domain.ReservationModels;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HotelsAndFlights.Domain.UserModels
 {
@@ -7,8 +8,12 @@ namespace HotelsAndFlights.Domain.UserModels
         public Guid Id { get; set; }
         public string UserName { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
-        public byte[] PasswordHash { get; set; } 
-        public byte[] PasswordSalt { get; set; }
+
+        [Column(TypeName = "bytea")]
+        public byte[] PasswordHash { get; set; } = new byte[32];
+
+        [Column(TypeName = "bytea")]
+        public byte[] PasswordSalt { get; set; } = new byte[32];
 
         public IList<Booking> Bookings { get; set; } = [];
         public Guid UserTypeId { get; set; }

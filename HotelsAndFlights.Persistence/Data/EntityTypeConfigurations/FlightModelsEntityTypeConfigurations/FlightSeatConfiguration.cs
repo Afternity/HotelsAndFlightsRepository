@@ -18,11 +18,10 @@ namespace HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.FlightModel
                 .IsRequired()
                 .HasColumnType("decimal(8, 2)");
             builder.Property(flighSeat => flighSeat.AvailableCount)
-                .IsRequired()
-                .HasAnnotation("Range", new RangeAttribute(0, 350));
+                .IsRequired();
             
             builder.HasOne(flighSeat => flighSeat.Flight)
-                .WithMany(flighSeat => flighSeat.FlightSeats)
+                .WithMany(fligh => fligh.FlightSeats)
                 .HasForeignKey(flighSeat => flighSeat.FlightId)
                 .OnDelete(DeleteBehavior.Cascade);
 

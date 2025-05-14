@@ -33,7 +33,7 @@ namespace HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.UserModelsE
             builder.HasMany(user => user.Bookings)
                 .WithOne(booking => booking.User)
                 .HasForeignKey(booking => booking.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasIndex(user => user.UserName)
                 .IsUnique();

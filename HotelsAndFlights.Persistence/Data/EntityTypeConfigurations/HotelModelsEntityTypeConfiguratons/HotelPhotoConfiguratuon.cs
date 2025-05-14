@@ -22,7 +22,7 @@ namespace HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.HotelModels
             builder.HasOne(hotelPhoto => hotelPhoto.Hotel)
                 .WithMany(hotel => hotel.HotelPhotos)
                 .HasForeignKey(hotelPhoto => hotelPhoto.HotelId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

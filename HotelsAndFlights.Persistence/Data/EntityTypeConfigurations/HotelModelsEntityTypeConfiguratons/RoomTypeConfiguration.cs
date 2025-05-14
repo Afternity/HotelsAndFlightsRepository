@@ -24,7 +24,7 @@ namespace HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.HotelModels
             builder.HasMany(roomType => roomType.Rooms)
                 .WithOne(room => room.RoomType)
                 .HasForeignKey(roomType => roomType.RoomTypeId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
