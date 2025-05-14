@@ -1,14 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using HotelsAndFlights.Domain;
-using HotelsAndFlights.Domain.FlightModels;
-using HotelsAndFlights.Domain.HotelModels;
-using HotelsAndFlights.Domain.ReservationModels;
-using HotelsAndFlights.Domain.UserModels;
 using HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.FlightModelsEntityTypeConfigurations;
 using HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.HotelModelsEntityTypeConfiguratons;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 using HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.ReservationModelsEntityTypeConfigurations;
 using HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.UserModelsEntityTypeConfigurations;
+using HotelsAndFlights.Domain.Models.FlightModels;
+using HotelsAndFlights.Domain.Models.HotelModels;
+using HotelsAndFlights.Domain.Models.ReservationModels;
+using HotelsAndFlights.Domain.Models.UserModels;
 
 namespace HotelsAndFlights.Persistence.Data
 {

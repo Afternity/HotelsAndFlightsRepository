@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace HotelsAndFlights.Domain.FlightModels
+namespace HotelsAndFlights.Domain.Models.FlightModels
 {
     public class FlightSeat
     {

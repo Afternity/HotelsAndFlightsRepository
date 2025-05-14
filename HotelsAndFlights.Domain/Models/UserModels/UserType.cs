@@ -1,4 +1,4 @@
-﻿namespace HotelsAndFlights.Domain.UserModels
+﻿namespace HotelsAndFlights.Domain.Models.UserModels
 {
     public class UserType
     {

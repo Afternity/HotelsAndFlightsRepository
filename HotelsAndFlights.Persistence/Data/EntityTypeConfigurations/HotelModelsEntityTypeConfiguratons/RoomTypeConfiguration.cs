@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using HotelsAndFlights.Domain;
-using HotelsAndFlights.Domain.HotelModels;
+using HotelsAndFlights.Domain.Models.HotelModels;
 
 namespace HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.HotelModelsEntityTypeConfiguratons
 {

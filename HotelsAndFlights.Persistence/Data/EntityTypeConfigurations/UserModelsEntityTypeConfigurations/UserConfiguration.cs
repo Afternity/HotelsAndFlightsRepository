@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using HotelsAndFlights.Domain.UserModels;
+using HotelsAndFlights.Domain.Models.UserModels;
 
 namespace HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.UserModelsEntityTypeConfigurations
 {
@@ -21,10 +21,10 @@ namespace HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.UserModelsE
                     v => v);
             builder.Property(user => user.PasswordHash)
                 .IsRequired()
-                .HasColumnType("varbinary(512)");
+                .HasColumnType("bytea");
             builder.Property(user => user.PasswordSalt)
                 .IsRequired()
-                .HasColumnType("varbinary(512)");
+                .HasColumnType("bytea");
 
             builder.HasOne(user => user.UserType)
                 .WithMany(userType => userType.Users)

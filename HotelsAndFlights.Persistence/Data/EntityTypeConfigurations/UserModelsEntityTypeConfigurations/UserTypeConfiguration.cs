@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using HotelsAndFlights.Domain.UserModels;
+using HotelsAndFlights.Domain.Models.UserModels;
 
 namespace HotelsAndFlights.Persistence.Data.EntityTypeConfigurations.UserModelsEntityTypeConfigurations
 {

@@ -1,7 +1,7 @@
-﻿using HotelsAndFlights.Domain.ReservationModels;
+﻿using HotelsAndFlights.Domain.Models.ReservationModels;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HotelsAndFlights.Domain.UserModels
+namespace HotelsAndFlights.Domain.Models.UserModels
 {
     public class User
     {

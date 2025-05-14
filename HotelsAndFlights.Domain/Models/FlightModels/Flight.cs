@@ -1,6 +1,6 @@
-﻿using HotelsAndFlights.Domain.ReservationModels;
+﻿using HotelsAndFlights.Domain.Models.ReservationModels;
 
-namespace HotelsAndFlights.Domain.FlightModels
+namespace HotelsAndFlights.Domain.Models.FlightModels
 {
     public class Flight
     {
