@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Design;
+﻿using HotelsAndFlights.Persistence.Data;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotelsAndFlights.Persistence.Data.Factories
@@ -8,7 +9,12 @@ namespace HotelsAndFlights.Persistence.Data.Factories
         public HotelsAndFlightsDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<HotelsAndFlightsDbContext>();
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;DataBase=DbHotelsAndFlights;UserName=postgres;Password=superuser123;");
+
+            HotelsAndFlightsDbContextConfig.ConfigureDbContext(
+                optionsBuilder,
+                "Host=localhost;Port=5432;DataBase=DbHotelsAndFlights;UserName=postgres;Password=superuser123;",
+                typeof(HotelsAndFlightsDbContext).Assembly.FullName);
+
             return new HotelsAndFlightsDbContext(optionsBuilder.Options);
         }
     }

@@ -9,6 +9,6 @@ namespace HotelsAndFlights.Domain.Interfaces
         Task UpdateAsync(Hotel hotel);
         Task DeleteAsync(Hotel hotel);
         Task<IList<Hotel>> GetAllAsync();
-        Task<IList<Hotel>> GetByRatingAsync(double rating);
+        Task<IList<Hotel>> GetByRatingAsync(double minRating);
     }
 }

@@ -1,11 +1,6 @@
 ﻿using HotelsAndFlights.Domain.Interfaces;
 using HotelsAndFlights.Domain.Models.HotelModels;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelsAndFlights.Persistence.Data.Repositories
 {
@@ -22,7 +17,7 @@ namespace HotelsAndFlights.Persistence.Data.Repositories
 
         public async Task AddAsync(Hotel hotel)
         {
-             await _context.Hotels.AddAsync(hotel);
+            await _context.Hotels.AddAsync(hotel);
             await _context.SaveChangesAsync();
         }
         public async Task UpdateAsync(Hotel hotel)
@@ -42,10 +37,9 @@ namespace HotelsAndFlights.Persistence.Data.Repositories
             return await _context.Hotels.OrderBy(hotel => hotel.Name).ToListAsync();
         }
 
-
-        public Task<IList<Hotel>> GetByRatingAsync(double rating)
+        public async Task<IList<Hotel>> GetByRatingAsync(double minRating)
         {
-            throw new NotImplementedException();
+            return await _context.Hotels.Where(hotel => hotel.Stars > minRating).ToListAsync();
         }
 
     }
