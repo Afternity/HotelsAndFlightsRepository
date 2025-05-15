@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HotelsAndFlights.Domain.Models.HotelModels;
 
 namespace HotelsAndFlights.Domain.Interfaces
 {
-    public interface ITypeRoomeRepository
+    public interface IRoomTypeRepository
     {
+        Task<RoomType> GetByIdAsync(Guid id);
+        Task AddAsync(RoomType roomType);
+        Task UpdateAsync(RoomType roomType);
+        Task DeleteAsync(RoomType roomType);
+        Task<IList<RoomType>> GetAllRoomType();
     }
 }
+ 

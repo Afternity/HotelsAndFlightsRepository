@@ -22,7 +22,9 @@ namespace HotelsAndFlights.Persistence
             });
 
             services.AddScoped<IHotelRepository, HotelRepository>();
+            services.AddScoped<IHotelPhotoRepository, HotelPhotoRepository>();
             services.AddScoped<IRoomRepository, RoomRepository>();
+            services.AddScoped<IRoomTypeRepository, RoomTypeRepository>();
 
             return services;
         }
