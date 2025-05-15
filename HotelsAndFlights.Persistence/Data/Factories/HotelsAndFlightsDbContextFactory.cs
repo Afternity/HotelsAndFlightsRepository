@@ -1,5 +1,4 @@
-﻿using HotelsAndFlights.Persistence.Data;
-using Microsoft.EntityFrameworkCore.Design;
+﻿using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotelsAndFlights.Persistence.Data.Factories
